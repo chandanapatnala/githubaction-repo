@@ -23,10 +23,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          asset_path: './var/lib/docker'
+          asset_path: '/var/lib/'
           upload_url: ${{ github.event.release.upload_url }}
           asset_name: avitoolsimage
-          asset_content_type: application 
+          asset_content_type: application/zip 
       
           
       
