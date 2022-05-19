@@ -18,8 +18,7 @@ jobs:
       - name: Run build
         run: sh build.sh
         id: createbuild
-        with:
-          tag_name: ${{steps.createbuildTag.outputs.string}}
+        
       - name: Upload the artifact 
         uses: actions/upload-release-asset@v1
         env:
@@ -27,7 +26,7 @@ jobs:
         with:
           asset_path: '../var/lib/docker/image/aufs/imagedb/content/sha256'
           upload_url: "${{ steps.createbuild.outputs.upload_url }}"
-          asset_name: ${{steps.createbuildTag.outputs.string}}
+          asset_name: avitoolsimage
           asset_content_type: application/octet-stream 
       
           
