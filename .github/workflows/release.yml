@@ -20,7 +20,7 @@ jobs:
         id: createbuild
       - name: Fix permissions 
         run: |
-          sudo chmod ugo+rwx /var/lib/docker/image/aufs/imagedb/content/sha256/
+          sudo chmod ugo+rwx var/lib/docker/image/aufs/imagedb/content/sha256
         
       - name: Upload the artifact 
         uses: actions/upload-release-asset@v1
