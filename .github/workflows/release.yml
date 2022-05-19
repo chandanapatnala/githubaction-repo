@@ -24,9 +24,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          asset_path: '/var/lib/docker/image/aufs/imagedb/content/sha256'
+          
           upload_url: "${{ github.event.release.upload_url }}"
           asset_name: avitoolsimage
+          asset_path: '/var/lib/docker/image/aufs/imagedb/content/sha256/avitoolsimage'
           asset_content_type: application/octet-stream 
       
           
